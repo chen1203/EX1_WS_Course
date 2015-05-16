@@ -1,0 +1,14 @@
+{
+  "name": "best_sellers_books_ws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bestSellers_ws.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chen Shamir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
