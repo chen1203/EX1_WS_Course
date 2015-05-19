@@ -4,7 +4,6 @@ var stream = require('stream');
 util.inherits(Book, events.EventEmitter);
 
 // ---- Book Object Constructor ----
-
 function Book(barcode,bookName,author,year,genre,total_copies,available_copies) {
 	this.barcode = barcode;
 	this.bookName = bookName;
@@ -51,6 +50,16 @@ Book.prototype.setAvailable_copies = function(available_copies) {
 	if (available_copies >= 0)
 		this.available_copies = available_copies;
 	console.log("The book available copies number was changed to :" + available_copies);
+};
+
+Book.prototype.printBookDetails = function() {
+	console.log("barcode : "+this.barcode);
+	console.log("name : "+this.bookName);
+	console.log("author : "+this.author);
+	console.log("year : "+this.year);
+	console.log("genre : "+this.genre);
+	console.log("total copies : "+this.total_copies);
+	console.log("available copies : "+this.available_copies);
 };
 
 // ---- Create Book instance to export ----
