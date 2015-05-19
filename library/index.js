@@ -9,7 +9,7 @@ var libData = {
 	"libraryName":"Ariela",
 	"address":"Shaul Ameleh 50, Tel-Aviv",
 	"books":[
-			{"barcode":"1","bookName":"Lucy Maud Montgomery","author":"author1","year":"1908","genre":"Drama","total_copies":"50","available_copies":"12"},
+			{"barcode":"1","bookName":"book1","author":"author1","year":"1908","genre":"Drama","total_copies":"50","available_copies":"12"},
 			{"barcode":"2","bookName":"book2","author":"author2","year":"1908","genre":"Comedy","total_copies":"70","available_copies":"0"},
 			{"barcode":"3","bookName":"book3","author":"author3","year":"2001","genre":"Thriller","total_copies":"30","available_copies":"0"},
 			{"barcode":"4","bookName":"book4","author":"author4","year":"2010","genre":"Drama","total_copies":"20","available_copies":"1"},
@@ -42,11 +42,11 @@ Library.prototype.init = function() {
 Library.prototype.addBook = function(newBook) {
 	console.log("Function 'addBook(newBook)' called.");
 	console.log("Return value: none.");
-	// checking if the newBook has barcode thar allready exist in the library
+	// checking if the newBook has barcode thar already exist in the library
 	var flag = 0;
 	for(var i=0;i < this.books.length; i++) {
 		if (this.books[i].barcode == newBook.barcode) {
-			console.log("The new book was not added because barcode is allready exist in the library.\n\n");
+			console.log("The new book was not added because barcode is already exist in the library.\n\n");
 			flag = 1;
 		}
 	}
