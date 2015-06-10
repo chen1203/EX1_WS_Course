@@ -3,7 +3,7 @@ var library = require('./library');
 var express = require('express');
 var http = require('http');
 var app = express();
-app.set('json spaces',3);
+app.set('json spaces',4);
 
 var mylibrary = library.getLibrary();
 
@@ -15,6 +15,8 @@ app.get('/library',function(req,res) {
 	console.log("\n---------------------------------------\n");	
 	console.log("PATH : '/library' ");
 	console.log("Getting all library details.\n\n");
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.status(200).json(mylibrary);
 });
 
@@ -22,6 +24,8 @@ app.get('/library',function(req,res) {
 app.get('/book/all',function(req,res) { 
 	console.log("\n---------------------------------------\n");	
 	console.log("PATH : '/book/all' ");
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.status(200).json(mylibrary.getAllBooks());
 });
 
@@ -29,6 +33,8 @@ app.get('/book/all',function(req,res) {
 app.get('/book/available', function(req,res) {
 	console.log("\n---------------------------------------\n");	
 	console.log("PATH : '/book/available' ");
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.status(200).json(mylibrary.getAllAvailableBooks());
 });
 
@@ -36,6 +42,8 @@ app.get('/book/available', function(req,res) {
 app.get('/book/name/:bookId', function(req,res) {
 	console.log("\n---------------------------------------\n");	
 	console.log("PATH : '/book/name/"+req.params.bookId+"' ");
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.status(200).json(mylibrary.getBookNameByBarcode(req.params.bookId));
 });
 
@@ -43,6 +51,8 @@ app.get('/book/name/:bookId', function(req,res) {
 app.get('/book/:bookId', function(req,res) {
 	console.log("\n---------------------------------------\n");	
 	console.log("PATH : '/book/"+req.params.bookId+"' ");
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.status(200).json(mylibrary.getBookByBarcode(req.params.bookId));
 });
 
@@ -50,6 +60,8 @@ app.get('/book/:bookId', function(req,res) {
 app.get('/book/genre/:genre', function(req,res) {
 	console.log("\n---------------------------------------\n");	
 	console.log("PATH : '/book/genre/"+req.params.genre+"' ");
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	res.status(200).json(mylibrary.getAllGenreBooks(req.params.genre)); 
 });
 

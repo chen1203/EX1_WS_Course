@@ -13,7 +13,8 @@ var libData = {
 			{"barcode":"2","bookName":"book2","author":"author2","year":"1908","genre":"Comedy","total_copies":"70","available_copies":"0"},
 			{"barcode":"3","bookName":"book3","author":"author3","year":"2001","genre":"Thriller","total_copies":"30","available_copies":"0"},
 			{"barcode":"4","bookName":"book4","author":"author4","year":"2010","genre":"Drama","total_copies":"20","available_copies":"1"},
-			{"barcode":"5","bookName":"book5","author":"author5","year":"1999","genre":"Thriller","total_copies":"80","available_copies":"31"}
+			{"barcode":"5","bookName":"book5","author":"author5","year":"1999","genre":"Thriller","total_copies":"80","available_copies":"31"},
+			{"barcode":"6","bookName":"book6","author":"author6","year":"1990","genre":"Thriller","total_copies":"800","available_copies":"40"}
 		]
 };
 
